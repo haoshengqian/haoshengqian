@@ -751,8 +751,7 @@
         })();
 
 
-        // https://fanliai-ttz0553.kuaizhan.com/63/60/p559405776abcb9
-        var detailUrl = location.origin + (location.href.indexOf('kuaizhan.com') > -1 ? '' : '/aih5/detail.html') + '#f=' + params.f + '&r=' + params.r;
+        var detailUrl = 'detail.html#f=' + params.f + '&r=' + params.r;
 
         $.getJSON(params.mid ? materialCouponListUrl : queryCouponListUrl, params, function(res){
             if(res.code == 0){
