@@ -1,7 +1,7 @@
 <html class="fl-android" data-screenwidth="375" style="font-size: 50px;">
 
 <head>
-    <title>搜索结果</title>
+    <title>精选推荐</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,245 +29,130 @@
     <style>html{font-size:50px}/*! normalize.css v2.1.2 | MIT License | git.io/normalize */article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C""\201D""\2018""\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0;vertical-align:middle}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}input:focus{outline:0}button,select{text-transform:none}button[disabled],html input[disabled]{cursor:default}input[type=checkbox],input[type=radio]{-moz-box-sizing:border-box;box-sizing:border-box}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse}body,html{margin:0;padding:0;border:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}a,abbr,acronym,address,article,aside,blockquote,body,caption,code,dd,del,dfn,dialog,div,dl,dt,em,fieldset,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,iframe,img,label,legend,li,nav,object,ol,p,pre,q,section,span,table,tbody,td,tfoot,th,thead,tr,ul{margin:0;padding:0;border:0;font-size:100%;font:inherit;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}button,input[readonly],input[type=button],input[type=reset],input[type=submit]{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-appearance:none}article,aside,details,dialog,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}ol,ul{list-style:none}table{border-collapse:separate;border-spacing:0}table,td,th{vertical-align:middle}caption,td,th{text-align:left;font-weight:400}body{font:14px PingFangSC-Regular,Helvetica Neue,Helvetica,STHeiTi,sans-serif;overflow-x:hidden}::-webkit-scrollbar{display:none;width:0;height:0}::-webkit-input-placeholder{color:#ccc}a{text-decoration:none;-webkit-touch-callout:none}a:active{outline:0}a.underline:active,a.underline:hover,a.underline:link,a.underline:visited{text-decoration:underline}.arial{font-family:Helvetica,Arial,sans-serif}.bold,.pf-bold{font-family:PingFangSC-Medium;font-weight:500}.fl-android .bold,.fl-android .pf-bold{font-weight:700}.clearfix{*zoom:1}.clearfix:after,.clearfix:before{display:table;line-height:0;content:""}.clearfix:after{clear:both}.w100{display:block;width:100%;vertical-align:middle}.flex{display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;display:-webkit-box;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-align:center}.flex-1{-webkit-flex:1;-moz-box-flex:1;-ms-flex:1;flex:1;-webkit-box-flex:1}[v-cloak]{display:none}@-webkit-keyframes a{0%{opacity:0}25%{opacity:.25}50%{opacity:.5}to{opacity:1}}@keyframes a{0%{opacity:0}25%{opacity:.25}50%{opacity:.5}to{opacity:1}}.img-fadein{-webkit-animation-duration:.25s;animation-duration:.25s;-webkit-animation-timing-function:ease;-webkit-animation-fill-mode:both;animation-fill-mode:both;animation-timing-function:ease;-webkit-animation-name:a;animation-name:a}[v-cloak]{visibility:hidden}.vmu-text-toast{position:fixed;z-index:3;left:0;top:50%;width:100%;margin-top:-50px;opacity:0;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-animation-duration:3s;animation-duration:3s;-webkit-transform:translateY(-10000px);text-align:center}.vmu-text-toast-content{display:inline-block;margin:0 5%;padding:10px 20px;background:rgba(0,0,0,.8);color:#fff;font-size:14px;line-height:18px;border-radius:3px}.vmu-text-toast-on{-webkit-animation-name:b;animation-name:b}@-webkit-keyframes b{0%{opacity:0;-webkit-transform:translateY(20px)}20%{opacity:1;-webkit-transform:translateY(0)}80%{opacity:1;-webkit-transform:translateY(0)}98%{opacity:.1;-webkit-transform:translateY(-20px)}to{opacity:0;-webkit-transform:translateY(-10000px)}}@keyframes b{0%{opacity:0;-webkit-transform:translateY(20px);transform:translateY(20px)}
 20%{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}80%{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}98%{opacity:.1;-webkit-transform:translateY(-20px);transform:translateY(-20px)}to{opacity:0;-webkit-transform:translateY(-10000px);transform:translateY(-10000px)}}.fl-hairlines .b1px{border-width:.7px}@media(max-device-width:320px){.fl-hairlines.fl-iphone .b1px{border-width:.5px}}@supports(padding-bottom:constant(safe-area-inset-bottom)){body{padding-bottom:constant(safe-area-inset-bottom)}}@supports(padding-bottom:env(safe-area-inset-bottom)){body{padding-bottom:env(safe-area-inset-bottom)}}</style>
     <style>
-        .img-box {
-            width: 6.8rem;
-            margin: .2rem auto;
-            height: 6.8rem;
-            background: #f7f7f7;
-            border-radius: .03rem;
-            overflow: hidden;
-        }
-
-        .tkl-text {
-            position: relative;
-            margin: .2rem .35rem;
-            padding: .16rem;
-            min-height: 1.55rem;
-            line-height: .4rem;
-            border: 1px solid #df7162;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            background: #fff;
-            border-radius: .1rem;
-            font-size: .28rem;
-            color: #757575;
-            -webkit-user-select: text;
-            -moz-user-select: text;
-            -ms-user-select: text;
-            user-select: text
-        }
-
-        .tkl-text span {
-            position: absolute;
-            width: 100%;
-            bottom: .12rem;
-            color: #df7162;
-            font-size: .24rem
-        }
-
-        .tkl-text b{
-            font-weight: normal;
-        }
-
-        .tkl-copy,
-        .tkl-text span {
-            display: block;
-            text-align: center
-        }
-
-        .tkl-copy {
-            width: 6.8rem;
-            line-height: .8rem;
-            height: .8rem;
-            margin: .2rem auto;
-            background: #df7162;
-            border-radius: .1rem;
-            font-size: .28rem;
-            color: #fff;
-            border: 0;
-            outline: none
-        }
-
-        .tkl-copy.focus {
-            opacity: .7
-        }
-
-        .tkl-copy.success {
-            background: #7dc57d;
-        }
-        .recom-title{
-            display: none;
-            position: relative;
-            margin: 0.4rem 0 0;
-            background-color: rgb(255, 255, 255);
-            border-top: 1px solid rgb(235, 235, 235);
-            border-bottom: 1px solid rgb(235, 235, 235);
-            line-height: 0.7rem;
-            font-size: 0.28rem;
-            color: rgb(236, 92, 42);
+        .result-tips {
+            line-height: 2rem;
             text-align: center;
+            font-size: .32rem;
+            color: #333
         }
-        .recom-title:before, .recom-title:after {
-            content: "";
-            display: inline-block;
-            width: 0.6rem;
-            height: 1px;
-            margin: 0 0.2rem;
-            background-color: rgb(236, 92, 42);
-            vertical-align: middle;
-        }
-        .recom-title.show, .recom-title.show + .recom-list{
-            display: block;
-        }
-        .recom-list{
-            display: none;
-            padding-left: 0.2rem;
-        }
-        .recom-item{
-            position: relative;
-            display: inline-block;
-            width: 3.5rem;
-            margin-top: 0.1rem;
-            background: rgb(255, 255, 255);
-            overflow: hidden;
-        }
-        .recom-item:nth-child(even){
-            margin-left: 0.1rem;
-        }
-        .goods-link{
-            display: block;
-            position: absolute;
-            width: 100%;
+        .cate-list{
+            background: #fff;
             height: 100%;
-            left: 0;
-            top: 0;
-            z-index: 1;
-        }
-        .goods-item{
-            position: relative;
-            padding: 0.1rem 0.2rem 0.14rem;
-            overflow: hidden;
-        }
-        .goods-img{
-            height: 3.5rem;
+            padding: 0 0 1rem;
             box-sizing: border-box;
-            border: 0.2rem solid #fff;
+            align-items: flex-start;
+            -webkit-box-align: start;
             overflow: hidden;
+            opacity: 0;
+            -webkit-transition: opacity 0.15s ease-in;
+            transition: opacity 0.15s ease-in;
         }
-        .goods-title{
-            display: -webkit-flex;
-            display: -webkit-box;
-            min-height: 0.8rem;
-            line-height: 0.4rem;
-            color: rgb(0, 0, 0);
-            font-size: 0.28rem;
+        .cate-list-main{
+            width: 1.5rem;
+            height: 100%;
+            margin: 0.1rem 0 0;
+            background-color: rgb(255, 255, 255);
+            overflow-x: hidden;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            border-right: 1px solid rgb(229, 229, 229);
+        }
+        .cate-main-item{
+            position: relative;
+            width: 100%;
+            height: 0.9rem;
+            border-bottom: 1px solid rgb(229, 229, 229);
+            border-right: 1px solid rgb(229, 229, 229);
+            line-height: 0.9rem;
+            font-size: 0.26rem;
+            color: rgb(51, 51, 51);
+            text-align: center;
             overflow: hidden;
             text-overflow: ellipsis;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 2;
-            word-wrap: break-word;
-            word-break: break-all;
+            white-space: nowrap;
         }
-        .goods-fanli{
-            margin: 0.15rem 0 0;
-            line-height: 0.33rem;
-            font-size: 0.24rem;
-            color: rgb(251, 6, 40);
+        .cate-main-item.cur{
+            color: #E00013;
         }
-        .goods-price{
-            line-height: 0.45rem;
-            font-size: 0.28rem;
-            color: #333;
+        .cate-sub-title{
+            padding: 0 0.3rem;
+            border-bottom: 1px solid rgb(235, 235, 235);
+            line-height: 0.9rem;
+            font-weight: 500;
+            font-size: 0.26rem;
+            color: rgb(51, 51, 51);
         }
-        .coupon-sales {
-            display: none;
-            position: absolute;
-            right: 0;
-            bottom: .2rem
-        }
-        .coupon-sales-show{
-            display: block;
-        }
-
-        .item-coupon {
-            position: relative;
-            min-width: 1rem;
-            height: .36rem;
-            line-height: .36rem;
-            background-image: -webkit-linear-gradient(90deg, #ff4f00, #e00013);
-            background-image: -webkit-linear-gradient(left, #ff4f00, #e00013);
-            background-image: linear-gradient(90deg, #ff4f00, #e00013);
-            border-radius: .03rem;
-            text-align: center;
-            font-size: .2rem;
-            color: #fff
-        }
-
-        .item-coupon:after,
-        .item-coupon:before {
-            content: "";
-            position: absolute;
-            display: block;
-            width: .12rem;
-            height: .12rem;
-            top: .12rem;
-            border-radius: 50%;
-            background: #fff
-        }
-
-        .item-coupon:before {
+        .tab-box{
+            position: fixed;
+            width: 100%;
+            height: 1rem;
+            line-height: 1rem;
+            bottom: 0;
             left: 0;
-            -webkit-transform: -webkit-translateX(-50%);
-            transform: -webkit-translateX(-50%);
-            transform: translateX(-50%)
+            background: #fff;
+            font-size: 0.32rem;
+            text-align: center;
+            box-shadow: 0 -1px 1px 0 #ebebeb;
+            z-index: 2;
         }
-
-        .item-coupon:after {
-            right: 0;
-            -webkit-transform: -webkit-translateX(50%);
-            transform: -webkit-translateX(50%);
-            transform: translateX(50%)
+        .cate-list-sub{
+            padding: 0.1rem 0.5%;
+            background-color: rgb(255, 255, 255);
+            font-size: 0;
         }
-
-        .item-sales {
-            margin: .1rem 0 0;
-            line-height: .33rem;
-            font-size: .24rem;
+        .cate-sub-item{
+            display: inline-block;
+            width: 33%;
+            padding: 0.1rem 0;
+        }
+        .sub-item-img{
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            margin: 0 auto 0.2rem;
+            border-radius: 0.1rem;
+            overflow: hidden;
+        }
+        .sub-item-text{
+            font-size: 0.22rem;
+            color: rgb(153, 153, 153);
+            text-align: center;
+        }
+        .tab-item{
+            display: block;
             color: #666;
-            text-align: right
+            width: 0;
+        }
+        .tab-item.cur{
+            color: #E00013;
         }
     </style>
-        <div class="img-box">
-            <img src="//static2.51fanli.net/common/images/loading/spacer.png" alt="" class="w100 J_pic">
-        </div>
-        <p class="tkl-text">
-            复制红框内信息打开→手掏APP←即可领优惠券<b class="J_tkl"></b>
-            <span>点击&nbsp;&gt;&nbsp;长按&nbsp;&gt;&nbsp;全选&nbsp;&gt;&nbsp;拷贝</span>
-        </p>
-        <a type="button" href="javascript:;" class="tkl-copy J_copy" data-clipboard-text="">一键复制</a>
+    <div class="result-tips" id="J_loading">努力加载中···</div>
 
-        <h3 class="recom-title J_recom_title">猜你喜欢</h3>
-        <div class="recom-list J_recom_list">
-            <!-- <div class="recom-item">
-                <a href="" class="goods-link"></a>
-                <img src="//static2.51fanli.net/common/images/loading/spacer.png" alt="" class="w100 goods-img">
-                <div class="goods-item">
-                    <p class="goods-title">杨生记 休闲零食泡面搭档 卤蛋 30g/袋 单只装</p>
-                    <p class="goods-fanli">返利：0.15元</p>
-                    <p class="goods-price">券后价：9.15元</p>
-                </div>
-            </div> -->
+    <div class="cate-list J_cate_box flex">
+        <ul class="cate-list-main b1px J_cate_list"></ul>
+        <div class="cate-sub-box flex-1">
+            <h3 class="cate-sub-title J_subcate_title"></h3>
+            <div class="cate-list-sub J_sub_cate">
+                <!-- <a href="javascript:;" class="cate-sub-item">
+                    <i class="sub-item-img"><img src="" alt="" class="w100"></i>
+                    <p class="sub-item-text">休闲零食</p>
+                </a> -->
+            </div>
         </div>
+    </div>
+
+    <div class="tab-box flex">
+        <a href="home.html" class="tab-item flex-1 J_tab_home">好货推荐</a>
+        <a href="javascript:;" class="tab-item flex-1 cur">精选分类</a>
+    </div>
 
     <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
 
     <script>
-        var queryCouponDetailUrl = '//wxfl.fanli.com/h5/tk/coupondetail'
         var getRecomListUrl = '//wxfl.fanli.com/h5/tk/itemRecommend'
-        var getHotListUrl = '//wxfl.fanli.com/h5/tk/hotSaleItems'
-        var recomOrHot = Math.random() > 0.5;
-
-        var $copyBtn = $('.J_copy');
+        var getCatesUrl = '//wxfl.fanli.com/h5/tk/getCates'
+        var cates = [];
 
         var params = (function(){
             var _params = {};
@@ -278,99 +163,60 @@
 
             return _params || {};
         })();
+        var homeUrl = 'home.html#r=' + params.r + '&f=' + params.f;
 
-        $('.J_pic').attr('src', params.image);
+        init();
 
-        getTkl();
-        initClipBoard();
-        getRecomList();
-        track('page_name.h5.detail.pty-jqr~std-190218');
-        $(window).on('hashchange', function(){
-            window.location.reload();
-        })
-        $(document).on('click', 'a[data-spm]', function(e){
-            e.preventDefault();
-            var _href = $(this).attr('href');
+        function init(){
+            getCates();
+            bindEvents();
+            $('.J_tab_home').attr('href', homeUrl);
+            track('page_name.h5.cates.pty-jqr~std-190218');
+        }
 
-            track($(this).data("spm") || "", function(){
-                window.location.href = _href;
-            });
-        })
-
-        function initClipBoard(){
-            var clipboard = new ClipboardJS('.J_copy');
-            var copyTimer;
-
-            clipboard.on('success', function(e){
-                clearTimeout(copyTimer);
-                $copyBtn.text('复制成功，打开【手淘】购买').addClass('success');
-                e.clearSelection();
-                copyTimer = setTimeout(function(){
-                    $copyBtn.text('一键复制').removeClass('success');
-                }, 2500);
-            })
-
-            clipboard.on('error', function(e){
-                $copyBtn.text('暂不支持一键复制，请长按红框内信息复制');
+        function bindEvents(){
+            $(document).on('click', '.J_cate', function(){
+                var $this = $(this);
+                $this.addClass('cur').siblings('.J_cate').removeClass('cur');
+                buildSubCates($this.text(), $this.data('index'));
             })
         }
 
-        function getTkl(){
-
-            if(params.word) {
-                var _tkl = params.word.indexOf('￥') > -1 ? params.word : ('￥' + params.word + '￥');
-                $('.J_tkl').text(_tkl);
-                document.querySelector('.J_copy').setAttribute('data-clipboard-text', _tkl);
-                return;
-            };
-
-            var _postData = {
-                item_id: params.item_id,
-                r: params.r,
-                f: params.f
-            };
-
-            $.getJSON(queryCouponDetailUrl, _postData, function(res){
+        function getCates(){
+            $.getJSON(getCatesUrl, {pos: 0}, function(res){
                 if(res.code == 0){
-                    var _tkl = res.data.coupon_detail.fl_tkl;
-                    $('.J_tkl').text(_tkl);
-                    document.querySelector('.J_copy').setAttribute('data-clipboard-text', _tkl);
-                    $copyBtn.removeClass('focus');
-                }else{
-                    $copyBtn.text('未获取到优惠信息！').addClass('focus');
+                    cates = res.data.categories;
+                    $('.J_cate_box').css('opacity', 1);
+                    $('#J_loading').hide();
+                    buildCates();
                 }
             });
         }
 
-        function getRecomList() {
-            var detailUrl = 'detail.html#f=' + params.f + '&r=' + params.r;
-            $.getJSON(recomOrHot ? getRecomListUrl : getHotListUrl, {item_id: params.item_id, r: params.r}, function(res){
-                if(res.code == 0){
-                    var _list = res.data.coupon_list;
-                    track('page_name.h5.detail.type-' + (recomOrHot ? 'recom' : 'hot') + '.length-' + _list.length + '.pty-jqr~std-190218');
-                    var listHtml = '';
-                    if(_list.length){
-                        _list.forEach(function(item){
-                            listHtml += '<div class="recom-item">\
-                                        <a href="' + (detailUrl + '&item_id=' + item.item_id + '&image=' + item.pic_url + '&word=' + item.fl_tkl) + '" class="goods-link" data-spm="page_name.h5.pty-jqr~std-190218"></a>\
-                                        <div class="goods-img"><img src="' + item.pic_url + '" alt="" class="w100"></div>\
-                                        <div class="goods-item">\
-                                            <p class="goods-title">' + item.title + '</p>\
-                                            <p class="goods-fanli">返利：' + item.amount_rebate + '元</p>\
-                                            <p class="goods-price">券后价：' + item.price_after_coupon + '元</p>\
-                                            <div class="coupon-sales' + (item.amount_coupon > 0 ? ' coupon-sales-show' : '') + '">\
-                                                <p class="item-coupon">' + item.amount_coupon + '元券</p>\
-                                            </div>\
-                                        </div>\
-                                    </div>';
-                        })
-                        $('.J_recom_list').html(listHtml);
-                        $('.J_recom_title').addClass('show');
-                    }
-                }
+        function buildCates(){
+            if(!cates.length) return;
+            var cateHtml = '';
+            cates.forEach(function(cate, index){
+                cateHtml += '<li class="cate-main-item b1px J_cate" data-index="' + index + '" data-cid="' + cate.id + '">' + cate.name + '</li>';
             })
+
+            $('.J_cate_list').html(cateHtml);
+            $('.J_cate').eq(0).trigger('click');
         }
 
+        function buildSubCates(name, index){
+            var subCateHtml = '';
+            var subCate = cates[index].child;
+
+            subCate.forEach(function(c){
+                subCateHtml += '<a href="' + homeUrl + '&cid=' + encodeURIComponent(c.mapping_id) + '" class="cate-sub-item">\
+                                    <i class="sub-item-img"><img src="' + c.img + '" alt="" class="w100"></i>\
+                                    <p class="sub-item-text">' + c.name + '</p>\
+                                </a>';
+            })
+            $('.J_subcate_title').text(name);
+            $('.J_sub_cate').html(subCateHtml);
+        }
         function track(spm, cbk){
             var _params = [
                 'referrer=' + encodeURIComponent(document.referrer),

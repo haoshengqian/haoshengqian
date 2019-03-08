@@ -13,17 +13,14 @@
     <link rel="shortcut icon" href="//www.fanli.com/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="//www.fanli.com/apple-touch-icon.png">
 
-    <!-- 上传快站片段1(js) start -->
     <script type="text/javascript" id="J_script_attrsniffer" data-remwidth="750">
         !function(){var e,t,a,n=navigator.userAgent.toLowerCase(),o=navigator.appVersion,i=document.documentElement,r=/ip(hone|od|ad)/i.test(n),s={iphone:"iphone",ipod:"ipod",ipad:"ipad",samsung:"samsung|sm-",huawei:"huawei",meizu:"mx[0-9]+"},d=/context\:([^\s]+)/i.exec(n);for(a in r?(i.classList.add("fl-ios"),e=o.match(/OS (\d+)[_\.](?:\d+)[_\.]?(?:\d+)?/),8<=(t=parseInt(e[1],10))&&i.classList.add("fl-hairlines")):(e=o,t=parseInt(n.substr(n.indexOf("android")+8,3)),i.classList.add("fl-android"),t<6&&i.classList.add("fl-android-"+t)),s){if(s.hasOwnProperty(a)&&new RegExp("\\b"+s[a]+"\\b").test(n)){i.classList.add("fl-"+a);break}}d&&"com"==d[1]&&document.querySelector("meta[name=viewport]").setAttribute("content","initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0")}(),!/f\.(51)?fanli\.com/.test(document.domain)&&document.addEventListener("DOMContentLoaded",function(e){if(-1<navigator.userAgent.toLowerCase().indexOf("fanli")){var t=document.createElement("iframe"),a=document.createAttribute("style"),n=document.createAttribute("src");a.nodeValue="display:none;width:0;height:0;",n.nodeValue="ifanli://m.51fanli.com/app/event/readystatechange?state=complete",t.setAttributeNode(a),t.setAttributeNode(n),document.body.appendChild(t),setTimeout(function(){document.body.removeChild(t)},250)}},!1),function(e,o){var i,t,r,a=o.querySelector("#J_script_attrsniffer"),n="onorientationchange" in e?"orientationchange":"resize",s=null,d=navigator.userAgent.toLowerCase(),c=/ip(hone|od|ad)/i.test(d),l=-1<d.indexOf("fanli"),u=/ipad/i.test(d);function m(){var e,t=o.documentElement,a=l&&c&&!u?window.screen.width:t.getBoundingClientRect().width,n=a/i*100;r&&"[remmaxwidth]"!==r&&n>Number(r)&&(n=Number(r)),t.setAttribute("data-screenwidth",a),t.style.fontSize=n+"px",e=parseFloat(window.getComputedStyle(t,null).getPropertyValue("font-size")),c||n==e||(e=e%1==0?e+0.5:e,t.style.fontSize=n/e*n+"px")}a&&(i=a.getAttribute("data-remwidth"),t=a.getAttribute("data-remswitch"),r=a.getAttribute("data-remmaxwidth"),"[remswitch]"!=t&&(i="[remwidth]"==i?750:Number(i),e.addEventListener(n,function(){clearTimeout(s),s=setTimeout(m,300)},!1),e.addEventListener("pageshow",function(e){e.persisted&&(clearTimeout(s),s=setTimeout(m,300))},!1),m()))}(window,document);
     </script>
-    <!-- 上传快站片段1(js) end -->
 
 </head>
 
 <body>
 
-    <!-- 上传快站片段2(html) start -->
     <style>
         html {
             font-size: 50px
@@ -34,6 +31,16 @@
             text-align: center;
             font-size: .32rem;
             color: #333
+        }
+
+        .source-tips{
+            display: none;
+            line-height: .45rem;
+            padding: 0.2rem 0.2rem;
+            background: #FFF1DC;
+            border: 1px solid #FFE3B8;
+            font-size: 0.3rem;
+            color: #6c6c6c;
         }
 
         .result-item {
@@ -729,13 +736,11 @@
         }
     </style>
     <div class="result-tips" id="J_loading">努力查找中···</div>
+    <div class="source-tips" id="J_source_tips">亲，您所查询的商品暂时没有优惠，我们给你推荐了同款有优惠的商品：</div>
     <div class="result-list" id="J_result_list"></div>
-    <!-- 上传快站片段2(html) end -->
 
-    <!-- zepto无需上传，快站外层默认引入zepto，有全局$可用 -->
-    <script src="https://kzcdn.itc.cn/res/skin/js/zepto.min.js?v=5.0"></script>
+    <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
 
-    <!-- 上传快站片段3(js) start -->
     <script>
         var queryCouponListUrl = '//wxfl.fanli.com/h5/tk/couponlist';
         var materialCouponListUrl = '//wxfl.fanli.com/h5/tk/materialProductsList';
@@ -752,6 +757,7 @@
 
 
         var detailUrl = 'detail.html#f=' + params.f + '&r=' + params.r;
+        track('page_name.h5.index.pty-jqr~std-190218');
 
         $.getJSON(params.mid ? materialCouponListUrl : queryCouponListUrl, params, function(res){
             if(res.code == 0){
@@ -759,6 +765,11 @@
                     $('#J_loading').text('暂无结果！').show();
                     return;
                 }
+
+                if(params.source && params.source != 'convertmkl'){
+                    $('#J_source_tips').show();
+                }
+
                 var listHtml = '';
                 res.data.coupon_list.forEach(function(item){
                     listHtml += '<a href="' + detailUrl + '&item_id=' + item.item_id + '&image=' + encodeURIComponent(item.pic_url) + '" class="flex result-item' + (params.mid ? ' result-m' : ' ') + '">'
@@ -781,8 +792,26 @@
                 $('#J_loading').text('暂无结果！').show();
             }
         });
+        function track(spm, cbk){
+            var _params = [
+                'referrer=' + encodeURIComponent(document.referrer),
+                'resolution_h=' + window.screen.height || 0,
+                'resolution_v=' + window.screen.width || 0,
+                'resolution_r=' + window.devicePixelRatio || 1,
+                'language=' + navigator.language || navigator.userLanguage,
+                'url=' + encodeURIComponent(location.href)
+            ];
+
+            _params.push('spm=' + spm);
+
+            var img = new Image();
+            img.onload = img.onerror = function () {
+                $.isFunction(cbk) && cbk();
+                img.onload = img.onerror = null;
+            }
+            img.src = "https://ubt" + Math.round(Math.random() * 9) + ".fanli.com/index.html?" + _params.join("&");
+        }
     </script>
-    <!-- 上传快站片段3(js) end -->
 
 </body>
 
